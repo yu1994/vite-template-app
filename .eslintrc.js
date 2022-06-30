@@ -33,6 +33,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:vue/vue3-recommended',
+    './.eslintrc-auto-import.json',
   ],
   rules: {
     // 'prettier/prettier': 1,
@@ -48,21 +49,14 @@ module.exports = {
     'vue/multi-word-component-names': 0,
     // typescript-eslint
     '@typescript-eslint/no-var-requires': 'off',
+    // eslint-plugin-import
     // Allow @ts-ignore comment
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/no-unused-vars': 1,
     '@typescript-eslint/no-empty-function': 1,
     '@typescript-eslint/no-explicit-any': 0,
-    'import/extensions': [
-      2,
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    'import/extensions': 0,
+    'import/no-unresolved': 0,
     // 'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'no-param-reassign': 0,
     'prefer-regex-literals': 0,

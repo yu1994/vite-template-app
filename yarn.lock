@@ -10,7 +10,7 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@antfu/utils@^0.5.2":
+"@antfu/utils@^0.5.1", "@antfu/utils@^0.5.2":
   version "0.5.2"
   resolved "https://registry.npmmirror.com/@antfu/utils/-/utils-0.5.2.tgz#8c2d931ff927be0ebe740169874a3d4004ab414b"
   integrity sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==
@@ -408,6 +408,11 @@
   dependencies:
     "@types/fined" "*"
     "@types/node" "*"
+
+"@types/mockjs@^1.0.4":
+  version "1.0.6"
+  resolved "https://registry.npmmirror.com/@types/mockjs/-/mockjs-1.0.6.tgz#dafdd5de65156f7aa63eab4e29fa3d532cd95609"
+  integrity sha512-Yu5YlqbYZyqsd6LjO4e8ONJDN9pTSnciHDcRP4teNOh/au2b8helFhgRx+3w8xsTFEnwr9jtfTVJbAx+eYmlHA==
 
 "@types/node@*":
   version "18.0.0"
@@ -2422,7 +2427,7 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.8"
 
-magic-string@^0.26.2:
+magic-string@^0.26.1, magic-string@^0.26.2:
   version "0.26.2"
   resolved "https://registry.npmmirror.com/magic-string/-/magic-string-0.26.2.tgz#5331700e4158cd6befda738bb6b0c7b93c0d4432"
   integrity sha512-NzzlXpclt5zAbmo6h6jNc8zl2gNRGHvmsZW4IvZhTC4W7k4OlLP+S5YLussa/r3ixNT66KOQfNORlXHSOy/X4A==
@@ -3324,6 +3329,18 @@ unc-path-regex@^0.1.2:
   resolved "https://registry.npmmirror.com/unc-path-regex/-/unc-path-regex-0.1.2.tgz#e73dd3d7b0d7c5ed86fbac6b0ae7d8c6a69d50fa"
   integrity sha512-eXL4nmJT7oCpkZsHZUOJo8hcX3GbsiDOa0Qu9F646fi8dT3XuSVopVqAcEiVzSKKH7UoDti23wNX3qGFxcW5Qg==
 
+unplugin-auto-import@^0.7.1:
+  version "0.7.2"
+  resolved "https://registry.npmmirror.com/unplugin-auto-import/-/unplugin-auto-import-0.7.2.tgz#99c42e5002a5cecfd6133c33a1e2919aba0c6d8c"
+  integrity sha512-VzaYUa2VByUT70WSFlOXoovyWuwC/8ePKQUC9fhU+BRmvTC7qhCVgChH/NieWMEVgyT+HhacxM+W7xMEOmA+MA==
+  dependencies:
+    "@antfu/utils" "^0.5.1"
+    "@rollup/pluginutils" "^4.2.0"
+    local-pkg "^0.4.1"
+    magic-string "^0.26.1"
+    resolve "^1.22.0"
+    unplugin "^0.6.1"
+
 unplugin-vue-components@^0.19.3:
   version "0.19.9"
   resolved "https://registry.npmmirror.com/unplugin-vue-components/-/unplugin-vue-components-0.19.9.tgz#87e913f3cf8cd1d36c6f5b597ca7a46cddb6229b"
@@ -3339,6 +3356,15 @@ unplugin-vue-components@^0.19.3:
     minimatch "^5.1.0"
     resolve "^1.22.0"
     unplugin "^0.7.0"
+
+unplugin@^0.6.1:
+  version "0.6.3"
+  resolved "https://registry.npmmirror.com/unplugin/-/unplugin-0.6.3.tgz#b8721e2b163a410a7efed726e6a0fc6fbadf975a"
+  integrity sha512-CoW88FQfCW/yabVc4bLrjikN9HC8dEvMU4O7B6K2jsYMPK0l6iAnd9dpJwqGcmXJKRCU9vwSsy653qg+RK0G6A==
+  dependencies:
+    chokidar "^3.5.3"
+    webpack-sources "^3.2.3"
+    webpack-virtual-modules "^0.4.3"
 
 unplugin@^0.7.0:
   version "0.7.0"

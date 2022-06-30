@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import '@/style/index.scss';
+import 'vant/es/dialog/style';
 import 'amfe-flexible/index.js';
 import '@/mock';
 import App from './App.vue';
