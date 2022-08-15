@@ -9,5 +9,11 @@ import '@/api/interceptor';
 
 const app = createApp(App);
 app.use(router);
-
+app.config.globalProperties.$currency = (val: number) => {
+  if (val !== undefined && val !== null) {
+    const newVal = (val * 100).toString();
+    return window.parseInt(newVal) / 100;
+  }
+  return '0.00';
+};
 app.mount('#app');

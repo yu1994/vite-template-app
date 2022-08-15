@@ -6,6 +6,7 @@
       <template v-for="(item, key) in renderData" :key="key">
         <van-cell :title="item.title" :value="item.time" />
       </template>
+      <van-cell title="currency" :value="$currency('11.243')" />
     </van-cell-group>
     <van-button type="primary" block>确定</van-button>
   </div>
