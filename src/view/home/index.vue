@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="box">主要按钮</div>
+    <div>主要按钮</div>
     <div class="box1">主要按钮</div>
     <van-cell-group>
       <template v-for="(item, key) in renderData" :key="key">
@@ -13,21 +13,20 @@
 </template>
 
 <script lang="ts" setup>
+  import { queryMessageListAPI, MessageRecord } from '@/api/message';
 
-import { queryMessageListAPI, MessageRecord } from '@/api/message';
-
-const renderData = ref<MessageRecord[]>([]);
-const fetchData = async () => {
-  const { data } = await queryMessageListAPI();
-  renderData.value = data;
-};
-fetchData();
+  const renderData = ref<MessageRecord[]>([]);
+  const fetchData = async () => {
+    const { data } = await queryMessageListAPI();
+    renderData.value = data;
+  };
+  fetchData();
 </script>
 
 <script lang="ts">
-export default {
-  name: 'Index',
-};
+  export default {
+    name: 'Index',
+  };
 </script>
 
 <style scoped lang="scss">
@@ -36,6 +35,9 @@ export default {
     height: 40px;
     margin-bottom: 15px;
     background-color: #909399;
+    .box1 {
+      position: relative;
+    }
   }
 
   .box1 {

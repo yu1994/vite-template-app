@@ -19,8 +19,7 @@ axios.interceptors.request.use(
   (error) =>
     // do something
     // eslint-disable-next-line implicit-arrow-linebreak
-    Promise.reject(error),
-
+    Promise.reject(error)
 );
 // add response interceptors
 axios.interceptors.response.use(
@@ -49,5 +48,5 @@ axios.interceptors.response.use(
       // on close
     });
     return Promise.reject(error);
-  },
+  }
 );
