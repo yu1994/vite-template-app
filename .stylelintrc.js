@@ -21,10 +21,10 @@ module.exports = {
     '**/*.ts',
     '**/*.json',
     '**/*.md',
-    '**/*.yaml'
+    '**/*.yaml',
   ],
   rules: {
-    "scss/at-if-no-null": null,
+    'scss/at-if-no-null': null,
     'rule-empty-line-before': [
       'always',
       {
@@ -36,6 +36,6 @@ module.exports = {
       {
         ignorePseudoClasses: ['deep'],
       },
-    ]
+    ],
   },
 };

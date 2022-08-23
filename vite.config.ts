@@ -22,9 +22,7 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    alias: [
-      { find: '@', replacement: path.resolve(__dirname, './src') },
-    ],
+    alias: [{ find: '@', replacement: path.resolve(__dirname, './src') }],
   },
   build: {
     outDir: 'vite-template-app-dist',
@@ -34,7 +32,7 @@ export default defineConfig({
     port: 3800,
     host: '0.0.0.0',
     proxy: {
-    //  '/website-charge': 'http://192.168.101.36:7845',
+      //  '/website-charge': 'http://192.168.101.36:7845',
     },
   },
 });
