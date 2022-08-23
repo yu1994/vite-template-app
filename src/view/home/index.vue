@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     <div>主要按钮</div>
     <div class="box1">主要按钮</div>
     <van-cell-group>
@@ -31,18 +31,16 @@
 
 <style scoped lang="scss">
   .box {
+    position: relative;
+    left: 0;
     width: 750px;
-    height: 40px;
     margin-bottom: 15px;
     background-color: #909399;
-    .box1 {
-      position: relative;
-    }
-  }
 
-  .box1 {
-    width: 750px;
-    font-size: 32px;
-    background-color: #909399;
+    .box1 {
+      width: 750px;
+      font-size: 32px;
+      background-color: #909399;
+    }
   }
 </style>
