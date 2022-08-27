@@ -6,11 +6,11 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
+    "plop": "plop",
+    "prepare": "husky install",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
-    "lint:style": "stylelint \"./**/*.{css,scss,vue,html}\" --fix",
-    "plop": "plop",
-    "prepare": "husky install"
+    "lint:style": "stylelint \"./**/*.{css,scss,vue,html}\" --fix"
   },
   "dependencies": {
     "axios": "^0.24.0",
