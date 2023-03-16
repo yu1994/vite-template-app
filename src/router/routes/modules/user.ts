@@ -10,7 +10,8 @@ const routerRecordRaws: RouteRecordRaw[] = [
       include: ['UserInfoDetail'],
     },
     component: () => import('@/view/user/user-info.vue'),
-  }, {
+  },
+  {
     path: '/user/info/detail',
     name: 'UserInfoDetail',
     meta: {

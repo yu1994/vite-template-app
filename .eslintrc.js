@@ -13,8 +13,8 @@ module.exports = {
     },
   },
   env: {
-    browser: true,
-    node: true,
+    'browser': true,
+    'node': true,
     'vue/setup-compiler-macros': true,
   },
   // 解决 ESLint  @/ 报错 import/no-unresolved
@@ -33,10 +33,16 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:vue/vue3-recommended',
+    'plugin:prettier/recommended',
     './.eslintrc-auto-import.json',
   ],
   rules: {
-    // 'prettier/prettier': 1,
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     // Vue: Recommended rules to be closed or modify
     'vue/require-default-prop': 0,
     'vue/singleline-html-element-content-newline': 0,

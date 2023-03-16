@@ -1,7 +1,7 @@
 <template>
   <layout>
     <template #default>
-      <router-view v-slot="{Component, route}">
+      <router-view v-slot="{ Component }">
         <keep-alive>
           <component :is="Component" />
         </keep-alive>
@@ -9,27 +9,25 @@
     </template>
     <template #footer>
       <van-tabbar route>
-        <van-tabbar-item replace to="/tabbar/home" icon="home-o">首页</van-tabbar-item>
-        <van-tabbar-item replace to="/tabbar/my" icon="search">我的</van-tabbar-item>
+        <van-tabbar-item replace to="/tabbar/home" icon="home-o"
+          >首页</van-tabbar-item
+        >
+        <van-tabbar-item replace to="/tabbar/my" icon="search"
+          >我的</van-tabbar-item
+        >
       </van-tabbar>
     </template>
   </layout>
 </template>
 
 <script lang="ts" setup>
-import useCache from '@/hooks/useCache';
+  import useCache from '@/hooks/useCache';
 
-useCache();
-console.log('标签');
-
+  useCache();
 </script>
 
 <script lang="ts">
-export default {
-  name: 'TabbarHome',
-};
+  export default {
+    name: 'TabbarHome',
+  };
 </script>
-
-<style scoped>
-
-</style>

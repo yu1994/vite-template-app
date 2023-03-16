@@ -6,11 +6,11 @@ interface SettingState {
 }
 
 const useSettingStore = defineStore('setting', {
-  state: ():SettingState => ({
+  state: (): SettingState => ({
     cacheList: new Set<string>(),
   }),
   getters: {
-    getCacheList():string[] {
+    getCacheList(): string[] {
       return Array.from(this.cacheList);
     },
   },

@@ -1,2 +1,4 @@
 /*.json
 dist
+plop-templates
+/plopfile.js

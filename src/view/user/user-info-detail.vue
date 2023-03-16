@@ -5,16 +5,11 @@
 </template>
 
 <script setup lang="ts">
-import Layout from '@/components/layout/index.vue';
-
-console.log('user info DETAIL');
+  import Layout from '@/components/layout/index.vue';
 </script>
+
 <script lang="ts">
-export default {
-  name: 'UserInfoDetail',
-};
+  export default {
+    name: 'UserInfoDetail',
+  };
 </script>
-
-<style scoped>
-
-</style>

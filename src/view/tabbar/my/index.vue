@@ -1,11 +1,5 @@
 <template>
-<div>my</div>
+  <div>my</div>
 </template>
 
-<script lang="ts" setup>
-console.log('my')
-</script>
-
-<style scoped>
-
-</style>
+<script lang="ts" setup></script>

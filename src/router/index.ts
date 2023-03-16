@@ -21,7 +21,8 @@ const router = createRouter({
           path: 'home',
           name: 'TabbarHome',
           component: () => import('@/view/tabbar/home/index.vue'),
-        }, {
+        },
+        {
           path: 'my',
           name: 'TabbarMy',
           component: () => import('@/view/tabbar/my/index.vue'),

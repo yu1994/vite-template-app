@@ -8,31 +8,27 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import Layout from '@/components/layout/index.vue';
-
-</script>
-
 <script lang="ts">
-export default {
-  name: 'Layout',
-};
+  export default {
+    name: 'Layout',
+  };
 </script>
 
 <style scoped lang="scss">
-.layout{
-  position: absolute;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  .layout-content{
-    position: relative;
+  .layout {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    flex: 1;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+
+    .layout-content {
+      position: relative;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
   }
-}
 </style>

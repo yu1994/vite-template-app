@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export function dictAPI(dictType:string) {
+export function dictAPI(dictType: string) {
   return axios.get(`/system/dict/data/type/${dictType}`);
 }
 

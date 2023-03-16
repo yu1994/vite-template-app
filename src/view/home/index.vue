@@ -1,36 +1,37 @@
 <template>
- <layout>
-   <div>
-     <div class="box">主要按钮</div>
-     <div class="box1">主要按钮</div>
-     <van-cell-group>
-       <template v-for="(item, key) in renderData" :key="key">
-         <van-cell :title="item.title" :value="item.time" />
-       </template>
-       <van-cell title="currency" :value="$currency('11.243')" />
-     </van-cell-group>
-     <van-button type="primary" block>确定</van-button>
-     <van-button type="primary" block :to="{path: '/user/info'}">to user info</van-button>
-   </div>
- </layout>
+  <layout>
+    <div>
+      <div class="box">主要按钮</div>
+      <div class="box1">主要按钮</div>
+      <van-cell-group>
+        <template v-for="(item, key) in renderData" :key="key">
+          <van-cell :title="item.title" :value="item.time" />
+        </template>
+        <van-cell title="currency" :value="$currency('11.243')" />
+      </van-cell-group>
+      <van-button type="primary" block>确定</van-button>
+      <van-button type="primary" block :to="{ path: '/user/info' }"
+        >to user info</van-button
+      >
+    </div>
+  </layout>
 </template>
 
 <script lang="ts" setup>
+  import { queryMessageListAPI, MessageRecord } from '@/api/message';
 
-import { queryMessageListAPI, MessageRecord } from '@/api/message';
-
-const renderData = ref<MessageRecord[]>([]);
-const fetchData = async () => {
-  const { data } = await queryMessageListAPI();
-  renderData.value = data;
-};
-fetchData();
+  const renderData = ref<MessageRecord[]>([]);
+  const fetchData = async () => {
+    const { data } = await queryMessageListAPI();
+    renderData.value = data;
+  };
+  fetchData();
 </script>
 
 <script lang="ts">
-export default {
-  name: 'Index',
-};
+  export default {
+    name: 'Index',
+  };
 </script>
 
 <style scoped lang="scss">

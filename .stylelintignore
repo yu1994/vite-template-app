@@ -1,0 +1,7 @@
+dist
+node_modules
+plop-templates
+package.json
+.vscode
+.husky
+
