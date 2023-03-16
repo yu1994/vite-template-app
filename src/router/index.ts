@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import pinia, { useSettingStore } from '@/store';
 import appRoutes from './routes';
-import Tabbar from '@/view/tabbar/index.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -12,7 +11,7 @@ const router = createRouter({
     },
     {
       path: '/tabbar/',
-      component: ()=>import('@/view/tabbar/index.vue'),
+      component: () => import('@/view/tabbar/index.vue'),
       meta: {
         title: '标签',
         keepalive: true,
@@ -20,14 +19,14 @@ const router = createRouter({
       children: [
         {
           path: 'home',
-          name:'tabbarHome',
-          component: ()=> import('@/view/tabbar/home/index.vue'),
-        },{
+          name: 'TabbarHome',
+          component: () => import('@/view/tabbar/home/index.vue'),
+        }, {
           path: 'my',
-          name:'tabbarMy',
-          component: ()=> import('@/view/tabbar/my/index.vue')
-        }
-      ]
+          name: 'TabbarMy',
+          component: () => import('@/view/tabbar/my/index.vue'),
+        },
+      ],
     },
     ...appRoutes,
   ],

@@ -3,7 +3,7 @@
     <template #default>
       <router-view v-slot="{Component, route}">
         <keep-alive>
-          <component :is="Component"/>
+          <component :is="Component" />
         </keep-alive>
       </router-view>
     </template>
@@ -18,9 +18,16 @@
 
 <script lang="ts" setup>
 import useCache from '@/hooks/useCache';
-useCache();
-console.log('标签')
 
+useCache();
+console.log('标签');
+
+</script>
+
+<script lang="ts">
+export default {
+  name: 'TabbarHome',
+};
 </script>
 
 <style scoped>
