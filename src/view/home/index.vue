@@ -31,8 +31,8 @@
 
 <style scoped lang="scss">
   .box {
-    left: 0;
     position: relative;
+    left: 0;
     width: 750px;
     margin-bottom: 15px;
     background-color: #909399;
