@@ -1,22 +1,33 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import pinia, { useSettingStore } from '@/store';
 import appRoutes from './routes';
+import Tabbar from '@/view/tabbar/index.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: '/',
-      redirect: 'home',
+      redirect: '/tabbar/home',
     },
     {
-      path: '/home',
-      name: 'home',
-      component: () => import('@/view/home/index.vue'),
+      path: '/tabbar/',
+      component: ()=>import('@/view/tabbar/index.vue'),
       meta: {
-        title: '首页',
-        requiresAuth: false,
+        title: '标签',
+        keepalive: true,
       },
+      children: [
+        {
+          path: 'home',
+          name:'tabbarHome',
+          component: ()=> import('@/view/tabbar/home/index.vue'),
+        },{
+          path: 'my',
+          name:'tabbarMy',
+          component: ()=> import('@/view/tabbar/my/index.vue')
+        }
+      ]
     },
     ...appRoutes,
   ],

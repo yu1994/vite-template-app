@@ -16,6 +16,7 @@ const useSettingStore = defineStore('setting', {
   },
   actions: {
     updateCache(route: RouteLocationNormalized) {
+      console.log(route)
       if (typeof route.name === 'string') {
         this.cacheList.add(route.name);
       }
