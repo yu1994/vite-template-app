@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" name="Home" setup>
   import { queryMessageListAPI, MessageRecord } from '@/api/message';
 
   const renderData = ref<MessageRecord[]>([]);
@@ -21,12 +21,6 @@
     renderData.value = data;
   };
   fetchData();
-</script>
-
-<script lang="ts">
-  export default {
-    name: 'Index',
-  };
 </script>
 
 <style scoped lang="scss">
