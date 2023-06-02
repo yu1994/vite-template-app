@@ -1,0 +1,28 @@
+@import "./var";
+
+// 字体
+@each $key, $value in $-font-sizes{
+  .fs-#{$key}{
+    font-size: $value * $-base-font-size;
+  }
+};
+
+// 颜色
+@each $key, $value in $-colors{
+  .text-#{$key} {
+    color: $value;
+  };
+  .bg-#{$key}{
+    background-color: $value;
+  }
+};
+
+@each $typeKey, $type in $-spacing-types{
+  @each $directionKey, $directionValue in $-spacing-directions{
+    @each $sizeKey, $sizeValue in $-spacing-sizes{
+      .#{$typeKey}#{$directionKey}-#{$sizeKey} {
+        #{$type}-#{$directionValue}: $sizeValue * $-spacing-base-size
+      }
+    }
+  }
+}

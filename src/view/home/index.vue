@@ -1,6 +1,12 @@
 <template>
   <div class="box">
-    <div>主要按钮</div>
+    <div class="fs-xs text-primary">主要按钮</div>
+    <div class="fs-sm text-success">主要按钮</div>
+    <div class="fs-md bg-warning mt-6">主要按钮</div>
+    <div class="fs-lg">主要按钮</div>
+    <div class="fs-xl">主要按钮</div>
+    <div class="fs-xxl">主要按钮</div>
+    <div class="fs-xxxl">主要按钮</div>
     <div class="box1">主要按钮</div>
     <van-cell-group>
       <template v-for="(item, key) in renderData" :key="key">
