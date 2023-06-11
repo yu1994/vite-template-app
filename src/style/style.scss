@@ -5,7 +5,7 @@
   .fs-#{$key}{
     font-size: $value * $-base-font-size;
   }
-};
+}
 
 // 颜色
 @each $key, $value in $-colors{
@@ -15,7 +15,7 @@
   .bg-#{$key}{
     background-color: $value;
   }
-};
+}
 
 @each $typeKey, $type in $-spacing-types{
   @each $directionKey, $directionValue in $-spacing-directions{
