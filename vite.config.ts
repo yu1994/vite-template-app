@@ -1,8 +1,8 @@
 import { defineConfig, loadEnv } from 'vite';
+import autoprefixer from 'autoprefixer';
 import createVitePlugins from './vite/plugins';
 // eslint-disable-next-line
 const path = require('path');
-
 // https://vitejs.dev/config/
 export default defineConfig(({ mode, command }) => {
   const env = loadEnv(mode, process.cwd());
@@ -28,6 +28,24 @@ export default defineConfig(({ mode, command }) => {
             }
           },
         },
+      },
+    },
+    css: {
+      postcss: {
+        plugins: [
+          // 配置 autoprefixer
+          autoprefixer({
+            overrideBrowserslist: [
+              'Android 4.1',
+              'iOS 7.1',
+              'Chrome > 31',
+              'ff > 31',
+              'ie >= 8',
+              '> 1%',
+            ],
+            grid: true,
+          }),
+        ],
       },
     },
     server: {
