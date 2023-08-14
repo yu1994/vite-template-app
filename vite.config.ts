@@ -11,8 +11,24 @@ export default defineConfig(({ mode, command }) => {
     resolve: {
       alias: [{ find: '@', replacement: path.resolve(__dirname, './src') }],
     },
+    esbuild: {
+      drop: ['console', 'debugger'],
+    },
     build: {
       outDir: 'vite-template-app-dist',
+      rollupOptions: {
+        output: {
+          chunkFileNames: 'assets/js/[name]-[hash].js',
+          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+          entryFileNames: 'assets/[name]-[hash].js',
+          // eslint-disable-next-line consistent-return
+          manualChunks(id): void | string {
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
+          },
+        },
+      },
     },
     server: {
       open: true,
