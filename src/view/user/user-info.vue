@@ -9,15 +9,9 @@
   </layout>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" name="UserInfo">
   import useCache from '@/hooks/useCache';
   import Layout from '@/components/layout/index.vue';
 
   useCache();
-</script>
-
-<script lang="ts">
-  export default {
-    name: 'UserInfo',
-  };
 </script>
