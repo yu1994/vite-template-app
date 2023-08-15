@@ -17,15 +17,53 @@ $-color-primary: #09aa8a !default;
 $-background-color-base: #efefef !default;
 $-background-color-info: #ecefef !default;
 
-/// fontSize|1|Font Size|0
-$-font-size-extra-large: 20px !default;
-/// fontSize|1|Font Size|0
-$-font-size-large: 18px !default;
-/// fontSize|1|Font Size|0
-$-font-size-medium: 16px !default;
-/// fontSize|1|Font Size|0
-$-font-size-base: 14px !default;
-/// fontSize|1|Font Size|0
-$-font-size-small: 13px !default;
-/// fontSize|1|Font Size|0
-$-font-size-extra-small: 12px !default;
+
+// 字体大小
+$-base-font-size: 32px;
+
+
+$-colors: (
+        'primary': $-color-primary,
+        'success': $-color-success,
+        'warning': $-color-warning,
+        'danger': $-color-danger,
+        'info': $-color-info
+);
+
+$-font-sizes: (
+        xs: 0.75, // 12px
+        sm: 0.875, // 14px
+        md: 1, // 16px
+        lg: 1.125, // 18px
+        xl: 1.25, // 20px
+        xxl: 1.375, // 22px
+        xxxl: 1.5, // 24px
+);
+
+// todo mt-0 => margin-top: 0
+// todo mt-1 => margin-top: 4px
+// todo mt-2 => margin-top: 8px
+
+$-spacing-types: (
+        m: margin,
+        p: padding,
+);
+
+$-spacing-directions: (
+        t: top,
+        r: right,
+        b: bottom,
+        l: left,
+);
+
+$-spacing-base-size: 32px;
+
+$-spacing-sizes: (
+        0: 0,
+        1: 0.25, // 4
+        2: 0.5, // 8
+        3: 0.75, // 12
+        4: 1, // 16
+        5: 1.5, // 24
+        6: 2, // 32
+)
