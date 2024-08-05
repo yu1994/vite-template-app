@@ -1,5 +1,5 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
-import { Dialog } from 'vant';
+import axios, { InternalAxiosRequestConfig } from 'axios';
+import { showDialog } from 'vant';
 // import { useUserStore } from '@/store';
 // import { getToken } from '@/utils/auth';
 
@@ -15,7 +15,7 @@ if (import.meta.env.VITE_API_BASE_URL) {
 }
 
 axios.interceptors.request.use(
-  (config: AxiosRequestConfig) => config,
+  (config: InternalAxiosRequestConfig) => config,
   (error) =>
     // do something
     // eslint-disable-next-line implicit-arrow-linebreak
@@ -23,11 +23,11 @@ axios.interceptors.request.use(
 );
 // add response interceptors
 axios.interceptors.response.use(
-  (response: AxiosResponse<HttpResponse>) => {
+  (response) => {
     const res = response.data;
     // if the custom code is not 20000, it is judged as an error.
     if (res.code !== 200) {
-      Dialog.alert({
+      showDialog({
         title: '提示',
         message: res.message || 'Error',
       }).then(() => {
@@ -41,7 +41,7 @@ axios.interceptors.response.use(
   (error) => {
     // const { response } = error;
     // const data = response.data as Data;
-    Dialog.alert({
+    showDialog({
       title: '提示',
       message: error.message || 'Error',
     }).then(() => {

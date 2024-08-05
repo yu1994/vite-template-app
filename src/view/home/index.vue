@@ -7,7 +7,7 @@
     <div class="fs-xl">主要按钮</div>
     <div class="fs-xxl">主要按钮</div>
     <div class="fs-xxxl">主要按钮</div>
-    <div class="box1">主要按钮</div>
+    <div class="box1">主要按钮11</div>
     <van-cell-group>
       <template v-for="(item, key) in renderData" :key="key">
         <van-cell :title="item.title" :value="item.time" />
@@ -33,12 +33,10 @@
   .box {
     position: relative;
     left: 0;
-    width: 750px;
     margin-bottom: 15px;
     background-color: #909399;
 
     .box1 {
-      width: 750px;
       font-size: 32px;
       background-color: #909399;
     }

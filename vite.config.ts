@@ -16,10 +16,11 @@ export default defineConfig(({ mode, command }) => {
     },
     build: {
       outDir: 'vite-template-app-dist',
+      target: 'es2015',
       rollupOptions: {
         output: {
           chunkFileNames: 'assets/js/[name]-[hash].js',
-          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+          // assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
           entryFileNames: 'assets/[name]-[hash].js',
           // eslint-disable-next-line consistent-return
           manualChunks(id): void | string {
